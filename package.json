@@ -1,0 +1,24 @@
+{
+  "name": "answer-advance-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirtheGreatest/answer-advance-new.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladimirtheGreatest/answer-advance-new/issues"
+  },
+  "homepage": "https://github.com/VladimirtheGreatest/answer-advance-new#readme",
+  "dependencies": {
+    "chromedriver": "^76.0.0",
+    "mocha": "^6.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.4"
+  }
+}
