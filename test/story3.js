@@ -36,6 +36,13 @@ suite(function(env) {
           await driver.findElement(page.locators.DropSlider).click();
           await page.dragDrop();
           let priceRange = await driver.findElement(page.locators.ProductOutsideTheRange);
+           // let seeArray = await driver.findElements(page.locators.ContentPrice);
+          //  for (let i = 0; i < seeArray.length; i++) {
+          //  var text = await seeArray.getText();
+          //  console.log(text);
+          //  }
+          //var text2 = await seeArray.getText();
+          //console.log(seeArray);
           var text = await priceRange.getText();
           var sliceCurrencySign = await text.slice(1,5)
           var value = await parseFloat(sliceCurrencySign)
