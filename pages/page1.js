@@ -31,7 +31,7 @@ class ShoppingCart {
       ErrorForm: By.id('create_account_error'),
       ErrorFormInput: By.css('.alert'),
       EmailInput: By.id('email_create'),
-      CreateAccount: By.css('#create-account_form > div > div.submit'),
+      CreateAccount: By.id('SubmitCreate'),
       FirstName : By.id('customer_firstname'),
       LastName : By.id('customer_lastname'),
       Password : By.id('passwd'),
@@ -89,7 +89,8 @@ class ShoppingCart {
   async CreateAccount(input) {
     await this.driver.findElement(this.locators.EmailInput).click();
     await this.driver.findElement(this.locators.EmailInput).sendKeys(input);
-    await this.driver.findElement(this.locators.CreateAccount).click();
+    let element = await this.driver.findElement(this.locators.CreateAccount)
+    await this.driver.executeScript("arguments[0].click();", element);
     await this.driver.sleep(2000);
   }
   async RegistrationForm(firstname, lastname, password, address, city, postcode, phone) {
